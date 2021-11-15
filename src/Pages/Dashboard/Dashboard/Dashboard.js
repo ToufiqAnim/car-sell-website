@@ -14,7 +14,6 @@ import Toolbar from '@mui/material/Toolbar';
 import { Link, NavLink } from 'react-router-dom';
 import { Button} from '@mui/material';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   useRouteMatch
@@ -56,7 +55,7 @@ const drawer = (
           <Link to={`${url}/addReview`} style={{textDecoration:'none'}}>
           <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>Add Review</Button>
         </Link> <br /><hr />
-         {admin &&<Box>
+         {admin && <Box>
          <Link to={`${url}/makeAdmin`} style={{textDecoration:'none'}}>
           <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>Make Admin</Button>
         </Link><br /><hr />
