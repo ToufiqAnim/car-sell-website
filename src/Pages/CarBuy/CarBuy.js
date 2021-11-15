@@ -25,7 +25,7 @@ const CarBuy = ({carDetail}) => {
             ...carBuyInfo,
             carName: name
         }
-        fetch('http://localhost:5000/buyer', {
+        fetch('https://still-thicket-39779.herokuapp.com/buyer', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

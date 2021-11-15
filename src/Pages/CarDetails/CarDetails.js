@@ -4,10 +4,10 @@ import useAuth from '../../Hooks/useAuth';
 import Header from '../Shared/Header/Header';
 import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
+
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import CarBuy from '../CarBuy/CarBuy';
@@ -19,7 +19,7 @@ const CarDetails = () => {
     const [carDetail, setCarDetail] = useState([]);
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/cars/${carId}`)
+        fetch(`https://still-thicket-39779.herokuapp.com/cars/${carId}`)
         .then(res => res.json())
         .then(data => setCarDetail(data))
     }, [])

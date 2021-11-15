@@ -46,7 +46,7 @@ const drawer = (
         
       <Divider />
       
-     <Box>
+     <Box >
           <Link to={`${url}/pay`} style={{textDecoration:'none' }}>
           <Button  color="inherit" sx={{fontWeight:'600',mx:1 ,color:'#1976d2'}} >Pay</Button>
         </Link> <br /><hr />
@@ -68,7 +68,7 @@ const drawer = (
         </Link><hr />
 
         <Link to={`${url}/manageAllOrders`} style={{textDecoration:'none'}}>
-            <Button  color="inherit" sx={{fontWeight:'600' ,color:'#1976d2'}}>Manage All Orders</Button>
+            <Button  color="inherit" sx={{fontWeight:'600' ,color:'#1976d2',mx:1}}>Manage All Orders</Button>
         </Link><hr />
          </Box>}
         </Box>
@@ -100,7 +100,7 @@ const drawer = (
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{backgroundColor:'#010f1e'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"

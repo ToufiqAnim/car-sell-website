@@ -22,7 +22,7 @@ const ManageAllOrders = () => {
     },[]);
 
     const handleCancelOrder = id =>{
-        const url = `http://localhost:5000/buyer/${id}`;
+        const url = `https://still-thicket-39779.herokuapp.com/${id}`;
         fetch(url, {
             method:"DELETE"
         })
