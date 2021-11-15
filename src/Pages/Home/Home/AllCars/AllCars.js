@@ -3,6 +3,7 @@ import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SingleCar from '../SingleCar/SingleCar';
+import './AllCar.css';
 
 const AllCars = () => {
     const [cars, setCars] = useState([]);
@@ -14,7 +15,7 @@ const AllCars = () => {
     return (
         <Box sx={{ flexGrow: 1, backgroundColor:'#eee' ,pb:5}}>
             <Container>
-                <Typography sx={{ fontWeight: 600, color: '#10cfe5' ,textAlign:'center', py:5}} variant="h4" component="div">
+                <Typography sx={{ fontWeight: 600, color: 'white' ,textAlign:'center', py:5}} variant="h3" component="div" className='text'>
                     CARS
                 </Typography>
                 

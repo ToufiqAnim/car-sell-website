@@ -14,15 +14,31 @@ const MyOrders = () => {
 
     const {user} = useAuth();
     const  [myOrders, setMyOrders] = useState([]);
+   
 
     useEffect(() => {
         const url =  `https://still-thicket-39779.herokuapp.com/buyer?email=${user.email}`
         fetch(url)
         .then(res => res.json())
         .then(data => setMyOrders(data))
-    });
+    },[user.email]);
 
-    
+    const handleCancelOrder = id =>{
+        const url = `https://still-thicket-39779.herokuapp.com/buyer/${id}`;
+        fetch(url, {
+            method:"DELETE"
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            if(data.deletedCount ){
+                alert('Your Order is Canceled')
+                const remaining =myOrders.filter(order => order._id !== id);
+            setMyOrders(remaining);
+            }
+            
+        })
+    }
 
     return (
         <div>
@@ -49,7 +65,7 @@ const MyOrders = () => {
                             <TableCell align="center">{row.email}</TableCell>
                             <TableCell align="center">{row.carName}</TableCell>
                             <TableCell align="center">
-                                <Button> Cancel Orders</Button></TableCell>
+                                <Button onClick={() => handleCancelOrder(row._id)}> Cancel Orders</Button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

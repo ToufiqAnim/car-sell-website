@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import  {NavLink, Link}  from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import CarDetails from '../../CarDetails/CarDetails';
-
+import './Header.css'
 
 const Header = () => {
     const {user, logOut} = useAuth();
@@ -28,9 +28,9 @@ const Header = () => {
             </IconButton>
             
             <Typography variant="h4" component="div" sx={{ flexGrow: 1,textAlign:'center'}}>
-              <Link to="/" style={{textDecoration:'none', color:'white'}}>Cars</Link>
+              <Link to="/" style={{textDecoration:'none', color:'white'}}>Highline Motors</Link>
             </Typography>
-
+            
             <Link to="/inventory" style={{textDecoration:'none', color:'white' }}>
             <Button color="inherit" style={{fontWeight:'bold'}}>Inventory</Button>
             </Link>

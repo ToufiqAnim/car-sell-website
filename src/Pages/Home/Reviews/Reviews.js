@@ -2,7 +2,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import Review from '../Home/Review/Review';
-
+import './Reviews.css'
 
 
 const Reviews = () => {
@@ -15,7 +15,7 @@ const Reviews = () => {
     return (
         <Box sx={{ flexGrow: 1}}>
             <Container>
-                <Typography sx={{ fontWeight: 600, color: '#10cfe5' ,textAlign:'center', py:5}} variant="h4" component="div">
+                <Typography className='text' sx={{ fontWeight: 600, color: 'salmon' ,textAlign:'center', py:5}} variant="h3" component="div" >
                     REVIEWS
                 </Typography>
                 

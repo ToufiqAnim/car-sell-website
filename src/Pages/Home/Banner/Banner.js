@@ -1,45 +1,58 @@
-import { Button, Container, Grid, Typography } from '@mui/material';
-import { Box } from '@mui/system';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Banner.css'
-import tesla from '../../images/model-3.png'
 
-const bannerBg = {
-    background: `url(${tesla})`,
-    backgroundRepeat:"no-repeat",
-    backgroundPosition: 'center',
-    backgroundSize:'cover' ,
-    width:'100%',
-        
-}
-const verticalCenter ={
-    display: 'flex',
-    textAlign:'left',
-    alignItems:'center',
-    minHeight:800
-    
-   
-}
+import { Container } from '@mui/material';
+import { Carousel } from 'react-carousel-minimal';
+
 
 const Banner = () => {
-    return (
-        <Box style={bannerBg}  sm={12}>
-           
-                <Grid style={{...verticalCenter}}  xs={6} md={12}>
+    const data = [
+        {
+          image: "https://cdn.vox-cdn.com/thumbor/EH3mwz-1RZ3smHMtWvD-HQBjn44=/0x0:2040x1360/1400x788/filters:focal(808x684:1134x1010):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55982391/vrg_tesla_model_3_blue_driving.0.jpg",
+          caption1:"Buy Your Dream Car",
+          caption:'Buy Your Dream Car'
+        },
+        {
+          image: "https://www.motortrend.com/uploads/sites/5/2014/03/2015-Mercedes-Benz-C-Class-front-three-quarters-in-motion1.jpg?fit=around%7C875:492",
+          caption: "Buy Your Dream Car"
+        }
+      
+      ];
 
-                <Box sx={{mx:'auto'}}>
-                <Typography variant="h2" sx={{fontWeight:'bold', color:'white', fontSize:'4rem'}} className='text'>
-                    We Have <br /> Your Dream Car
-                </Typography>
+      const captionStyle = {
+        fontSize: '4em',
+        fontWeight: 'bold',
+        
+      }
+     
+    return (
+        <Container >
+            <Carousel
+              data={data}
+              time={5000}
+              width="100%"
+              height="600px"
+              captionStyle={captionStyle}
+              
+              slideNumber={true}
+              // slideNumberStyle={slideNumberStyle}
+              captionPosition="bottom"
+              automatic={true}
+              dots={true}
+              pauseIconColor="white"
+              pauseIconSize="40px"
+              slideBackgroundColor="darkgrey"
+              slideImageFit="cover"
+              radius="10px"
+              thumbnailWidth="100px"
+              style={{
+                textAlign: "center",
+                maxWidth: "100%",
+                maxHeight: "600px",
+                margin:'30px auto'
                 
-                <Link to="/appoinment" style={{textDecoration:'none'}}>
-                <Button variant="contained" sx={{px:3, fontWeight:600}} style={{backgroundColor:'#10cfe5'}} >See More</Button>
-                </Link>
-                </Box>
-                </Grid>
-            
-        </Box>
+              }}
+            />
+          </Container>
+
     );
 };
 

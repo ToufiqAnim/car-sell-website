@@ -28,7 +28,7 @@ const SingleCar = (props) => {
                 </CardContent>
                 <CardActions >
                 <Link to={`/carDetails/${_id}`}  style={{textDecoration:'none'}}>
-                <Button variant='contained' sx={{textAlign:'center', mb:2}} >Buy NOw</Button>
+                <Button variant='contained' sx={{textAlign:'center', mb:2, backgroundColor:'#010f1e'}} >Buy NOw</Button>
                 </Link>
                 
                 

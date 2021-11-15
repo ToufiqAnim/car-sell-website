@@ -15,14 +15,14 @@ const ManageAllOrders = () => {
     const  [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        const url =  `http://localhost:5000/buyer`
+        const url =  `https://still-thicket-39779.herokuapp.com/buyer`
         fetch(url)
         .then(res => res.json())
         .then(data => setAllOrders(data))
     },[]);
 
     const handleCancelOrder = id =>{
-        const url = `https://still-thicket-39779.herokuapp.com/${id}`;
+        const url = `https://still-thicket-39779.herokuapp.com/buyer/${id}`;
         fetch(url, {
             method:"DELETE"
         })

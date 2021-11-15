@@ -5,7 +5,7 @@ import about from '../../images/about.png'
 const AboutUs = () => {
     return (
         <div>
-            <img src={about} alt="" style={{marginTop:30,width:'100%'}} />
+            <img src={about} alt="" style={{marginTop:50,width:'100%'}} />
             <Container sx={{my:8}}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={4}>
@@ -17,7 +17,7 @@ const AboutUs = () => {
                     <Grid item xs={12} sm={6}>
                       <Card sx={{p:4,boxShadow:0}}>
                           
-                      <Typography variant='h5' sx={{fontWeight:600}}>Welcome To The Highline Motors</Typography><hr />
+                      <Typography variant='h5' sx={{fontWeight:600}}>Welcome To The <span style={{color:'salmon',fontSize:25}}>Highline Motors</span></Typography><hr />
                         <Typography variant='subtitle1'>
                         Before we get ahead of ourselves, we want to welcome you to Loeber Motors. While nothing can replace thing on-the-lot experience.
                         </Typography>
@@ -30,7 +30,7 @@ const AboutUs = () => {
                    
                     <Grid xs={12} sm={6} sx={{mt:5}}>
                         <Card sx={{p:4,boxShadow:0}}>
-                        <Typography variant='h5' sx={{fontWeight:600}}>CORE VALUES</Typography>
+                        <Typography variant='h4' sx={{fontWeight:600, color:'salmon'}}>CORE VALUES</Typography>
                         <hr />
                         <Typography>We go through extensive factory training so that we may provide you with the knowledge you need to make an educated decision in choosing the vehicle that is right for your lifestyle.</Typography>
                         <Typography>
