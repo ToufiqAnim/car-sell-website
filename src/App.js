@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
 import Inventory from './Pages/Home/Inventory/Inventory';
 import Home from './Pages/Home/Home/Home';
@@ -14,7 +14,7 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/Home/LogIn/PrivateRoute/PrivateRoute';
 import CarDetails from './Pages/CarDetails/CarDetails';
 import DashBoard from './Pages/Dashboard/Dashboard/Dashboard';
-import Footer from './Pages/Shared/Footer/Footer';
+
 
 
 function App() {
