@@ -47,7 +47,7 @@ const Banner = () => {
                 textAlign: "center",
                 maxWidth: "100%",
                 maxHeight: "600px",
-                margin:'30px auto'
+                margin:'40px auto'
                 
               }}
             />

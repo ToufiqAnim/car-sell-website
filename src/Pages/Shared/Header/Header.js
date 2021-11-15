@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import  {NavLink, Link}  from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-import CarDetails from '../../CarDetails/CarDetails';
+
 import './Header.css'
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
-          <Toolbar sx={{backgroundColor:'#010f1e'}}>
+          <Toolbar sx={{backgroundColor:'#010f1e', py:2}}>
             <IconButton
               size="large"
               edge="start"
