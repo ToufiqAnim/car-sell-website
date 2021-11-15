@@ -1,0 +1,20 @@
+/* .add-tours{
+    margin-top: 50px;
+    margin-bottom: 200px;
+} */
+.add-tours form{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.add-tours form input, textarea{
+    width: 80%;
+    margin-bottom: 10px;
+    background-color: #eee;
+    border:none;
+    padding:20px
+}

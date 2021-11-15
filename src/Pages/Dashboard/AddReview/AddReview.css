@@ -1,0 +1,16 @@
+.add-tours form{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.add-tours form input, textarea{
+    width: 80%;
+    margin-bottom: 10px;
+    background-color: #eee;
+    border:none;
+    padding:20px
+}
