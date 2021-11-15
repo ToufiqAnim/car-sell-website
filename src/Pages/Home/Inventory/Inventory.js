@@ -15,7 +15,7 @@ const Inventory = () => {
     })
     return (
         <>
-        <Box sx={{backgroundColor:'#eee'}}>
+        <Box sx={{backgroundColor:'#eee', pb:4}}>
             <Header></Header>
             <img style={{width:'100%'}} src={inventory} alt="" srcset="" />
             <Container sx={{mt:5}}>

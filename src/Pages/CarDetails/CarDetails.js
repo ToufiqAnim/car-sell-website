@@ -14,7 +14,7 @@ import CarBuy from '../CarBuy/CarBuy';
 
 
 const CarDetails = () => {
-    const {user} = useAuth();
+    
     const {carId} = useParams();
     const [carDetail, setCarDetail] = useState([]);
 

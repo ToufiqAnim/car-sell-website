@@ -15,7 +15,7 @@ const Reviews = () => {
     return (
         <Box sx={{ flexGrow: 1}}>
             <Container>
-                <Typography className='text' sx={{ fontWeight: 600, color: 'salmon' ,textAlign:'center', py:5}} variant="h3" component="div" >
+                <Typography sx={{ fontWeight: 600, color: 'salmon' ,textAlign:'center', py:5}} variant="h3" component="div" >
                     REVIEWS
                 </Typography>
                 

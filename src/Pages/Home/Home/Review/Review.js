@@ -12,14 +12,14 @@ const Review = (props) => {
         <Grid item xs={4} sm={4} md={4} >
         <Card sx={{boxShadow:2, height:350 }}>
             
-            <CardContent sx={{textAlign:'center'}}>
-                <Typography  variant="h5" component="div" sx={{fontWeight:600,p:2}}>
-                    {name}
+            <CardContent sx={{textAlign:'center' }}>
+                <Typography  variant="h5" component="div" sx={{fontWeight:600,p:2,color:'salmon'}}>
+                    {name} <hr />
                 </Typography>
-                <Typography variant="subtitle" sx={{p:2}}>
+                <Typography  sx={{p:2,color:'gray',fontSize:14}}>
                     {reviewDescription}
                 </Typography> <br />
-                <Typography sx={{mt:2}}>
+                <Typography>
                     <Rating
                     name="read-only"
                     value={ratings}

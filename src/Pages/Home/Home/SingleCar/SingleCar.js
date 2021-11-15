@@ -8,10 +8,10 @@ import { Button, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const SingleCar = (props) => {
-    const {_id, name, price, image } = props.car;
+    const {_id, name, price, image,mpg,transmission } = props.car;
     return (
         <Grid item xs={4} sm={4} md={4} >
-            <Card sx={{ borderRadius: 2  }}>
+            <Card sx={{ borderRadius: 2, height:430  }}>
                 <CardMedia
                     component="img"
                     sx={{height:200}}
@@ -19,16 +19,19 @@ const SingleCar = (props) => {
                     alt="green iguana"
                 />
                 <CardContent>
-                    <Typography  variant="h5" component="div" sx={{fontWeight:600}}>
+                <Typography variant="subtitle" sx={{fontWeight:500}}>
+                        {mpg} {transmission}
+                    </Typography>
+                    <Typography  variant="h5" component="div" sx={{fontWeight:600,color:'#1976d2',py:1}}>
                         {name}
                     </Typography>
-                    <Typography variant="h6" sx={{fontWeight:600}}>
+                    <Typography variant="h6" sx={{fontWeight:600,color:'gray'}}>
                         ${price}
                     </Typography>
                 </CardContent>
                 <CardActions >
                 <Link to={`/carDetails/${_id}`}  style={{textDecoration:'none'}}>
-                <Button variant='contained' sx={{textAlign:'center', mb:2, backgroundColor:'#010f1e'}} >Buy NOw</Button>
+                <Button variant='contained' sx={{textAlign:'center', mb:2, backgroundColor:'salmon'}} >Buy NOw</Button>
                 </Link>
                 
                 

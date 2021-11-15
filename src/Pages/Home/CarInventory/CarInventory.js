@@ -5,14 +5,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActions } from '@mui/material';
-import { Box } from '@mui/system';
+
 import { Link } from 'react-router-dom';
 
 const CarInventory = ({car}) => {
     const {_id,image,name,price,mpg,transmission} = car;
     return (
         <Grid item xs={4} sm={4} md={4}>
-            <Card sx={{  borderRadius: 2  }}>
+            <Card sx={{  borderRadius: 2  ,height:450}}>
                 <CardMedia
                     component="img"
                     sx={{height:200}}
