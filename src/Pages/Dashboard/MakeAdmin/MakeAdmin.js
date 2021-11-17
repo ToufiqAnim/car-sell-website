@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     }
     const handleMakeAdmin = e => {
         const user = { email };
-        fetch('https://still-thicket-39779.herokuapp.com/admin', {
+        fetch('https://still-thicket-39779.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
 

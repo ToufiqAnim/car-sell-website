@@ -14,10 +14,12 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/Home/LogIn/PrivateRoute/PrivateRoute';
 import CarDetails from './Pages/CarDetails/CarDetails';
 import DashBoard from './Pages/Dashboard/Dashboard/Dashboard';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function App() {
+  AOS.init()
   return (
     <div className="App">
       <AuthProvider>

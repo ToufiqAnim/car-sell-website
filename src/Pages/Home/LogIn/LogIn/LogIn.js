@@ -46,7 +46,7 @@ const LogIn = () => {
          <Typography variant="h4" sx={{textAlign:'center', fontWeight:'600',color:'#1976D2'}}>Login</Typography>
 
         <Grid container>
-            <Grid style={bgLogin} item sx={{ mt: 8, boxShadow:2}} xs={12} md={6}>
+            <Grid style={bgLogin} item sx={{ mt: 8, boxShadow:2}} xs={12} md={6} data-aos="fade-right" data-aos-duration="1500">
                 
                 <form onSubmit={handleLoginSubmit} style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',marginTop:'25%'}}>
                    
@@ -98,7 +98,7 @@ const LogIn = () => {
                
                 
             </Grid>
-            <Grid sx={{mt: 8}} item xs={12} md={6}>
+            <Grid sx={{mt: 8}} item xs={12} md={6} data-aos="fade-left" data-aos-duration="1500">
                 <img style={{ width: '100%',height:600}} src={login} alt="" />
             </Grid>
         </Grid>

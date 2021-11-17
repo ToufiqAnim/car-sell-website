@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const SingleCar = (props) => {
     const {_id, name, price, image,mpg,transmission } = props.car;
     return (
-        <Grid item xs={4} sm={4} md={4} >
+        <Grid item xs={4} sm={4} md={4} data-aos="fade-right" data-aos-duration="1500" >
             <Card sx={{ borderRadius: 2, height:430  }}>
                 <CardMedia
                     component="img"

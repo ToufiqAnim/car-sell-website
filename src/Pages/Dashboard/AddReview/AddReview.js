@@ -20,7 +20,7 @@ const AddReview = () => {
         }) 
     };
     return (
-        <Box className="add-tours" sx={{ mt:5}} >
+        <Box className="add-tours" sx={{ mt:5}} data-aos="zoom-in" data-aos-duration="1500" >
        
                 <Typography variant="h4" color="initial" sx={{textAlign:'center', mb:4}}>
                     Add Your Review

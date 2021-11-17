@@ -5,17 +5,17 @@ import about from '../../images/about.png'
 const AboutUs = () => {
     return (
         <div>
-            <img src={about} alt="" style={{marginTop:50,width:'100%'}} />
+            <img src={about} alt="" style={{marginTop:50,width:'100%'}} data-aos="zoom-in" data-aos-duration="1000"/>
             <Container sx={{my:8}}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6} sx={{}}>
                         <Card sx={{p:4,boxShadow:0}}>
-                        <img src="https://www.cnet.com/a/img/3VRsQNQpQULculDN143YEcQAA0I=/2021/07/23/ed905c92-d37f-4f10-9c7a-c6e1a8968e1a/bugatti-divo-40-1-ogi.jpg" alt="" srcset="" style={{width:'100%'}}/>
+                        <img src="https://www.cnet.com/a/img/3VRsQNQpQULculDN143YEcQAA0I=/2021/07/23/ed905c92-d37f-4f10-9c7a-c6e1a8968e1a/bugatti-divo-40-1-ogi.jpg" alt="" srcset="" style={{width:'100%'}} data-aos="fade-right" data-aos-duration="1500"/>
                         </Card>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                      <Card sx={{p:4,boxShadow:0}}>
+                      <Card sx={{p:4,boxShadow:0}}  data-aos="fade-left" data-aos-duration="1500">
                           
                       <Typography variant='h5' sx={{fontWeight:600}}>Welcome To The <span style={{color:'salmon',fontSize:25}}>Highline Motors</span></Typography><hr />
                         <Typography sx={{color:'gray'}} >
@@ -29,8 +29,8 @@ const AboutUs = () => {
                     </Grid>
                    
                     <Grid xs={12} sm={6} sx={{mt:5}}>
-                        <Card sx={{p:4,boxShadow:0}}>
-                        <Typography variant='h4' sx={{fontWeight:600, color:'salmon'}}>CORE VALUES</Typography>
+                        <Card sx={{p:4,boxShadow:0}} data-aos="fade-right" data-aos-duration="1500">
+                        <Typography variant='h4' sx={{fontWeight:600, color:'salmon'}} >CORE VALUES</Typography>
                         <hr />
                         <Typography sx={{color:'gray'}}>We go through extensive factory training so that we may provide you with the knowledge you need to make an educated decision in choosing the vehicle that is right for your lifestyle.</Typography>
                         <Typography sx={{color:'gray'}}>
@@ -47,7 +47,7 @@ const AboutUs = () => {
 
                     <Grid xs={12} sm={6} sx={{mt:5}}>
                         <Card sx={{p:4,boxShadow:0}}>
-                        <img src="https://motors.stylemixthemes.com/wp-content/uploads/2015/10/slide-2-1597x597.jpg" alt="" srcset="" style={{width:"100%",height:300}}/>
+                        <img src="https://motors.stylemixthemes.com/wp-content/uploads/2015/10/slide-2-1597x597.jpg" alt="" srcset="" style={{width:"100%",height:300}} data-aos="fade-left" data-aos-duration="1500"/>
                         </Card>
                     </Grid>
                 </Grid>
