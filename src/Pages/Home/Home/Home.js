@@ -9,7 +9,7 @@ import AllCars from './AllCars/AllCars';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
+            
             <Banner></Banner>
             <AllCars></AllCars>
             <Reviews></Reviews>

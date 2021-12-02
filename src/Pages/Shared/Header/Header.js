@@ -15,8 +15,8 @@ const Header = () => {
     const {user, logOut} = useAuth();
     return (
         <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar sx={{backgroundColor:'#010f1e', py:2}}>
+        <AppBar position="static" >
+          <Toolbar sx={{backgroundColor:'#09a0f7', py:2}}>
             <IconButton
               size="large"
               edge="start"
@@ -37,17 +37,17 @@ const Header = () => {
             
             {user?.email ?
             <Box>
-            <NavLink to="/dashboard" style={{textDecoration:'none', color:'white'}}>
+            <NavLink to="/dashboard" style={{textDecoration:'none', color:'black'}}>
              <Button color="inherit" style={{fontWeight:'bold'}}>DashBoard</Button>
              </NavLink>
-             <Button onClick={logOut} color="inherit">Logout</Button>
+             <Button onClick={logOut} >Logout</Button>
              <Button  color="inherit">
             {user.displayName}
           </Button>
              </Box>
             :
-             <NavLink to="/login" style={{textDecoration:'none', color:'white'}}>
-             <Button color="inherit" style={{fontWeight:'bold'}}>Login</Button>
+             <NavLink to="/login" style={{textDecoration:'none',backgroundColor:'#09a0f7'}}>
+             <Button  style={{fontWeight:'bold', color:'white'}}>Login</Button>
              </NavLink>}
         
           </Toolbar>

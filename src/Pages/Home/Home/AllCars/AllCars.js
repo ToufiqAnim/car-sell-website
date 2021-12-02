@@ -13,11 +13,14 @@ const AllCars = () => {
         .then(data => setCars(data.slice(0,6)))
     })
     return (
-        <Box sx={{ flexGrow: 1, backgroundColor:'#eee' ,pb:5}}>
+        <Box sx={{ flexGrow: 1 ,pb:5}}>
             <Container>
-                <Typography sx={{ fontWeight: 600, color: 'white' ,textAlign:'center', py:5}} variant="h3" component="div" className='text'>
-                    CARS
+                <Typography sx={{ fontWeight: 500, color: '#112240' ,textAlign:'center', pt:5}} variant="h3" component="div" className='text'>
+                    Featured Card Deals
                 </Typography>
+                <Typography sx={{ fontWeight: 500, color: '#09a0f7' ,textAlign:'center'}} variant="h4" component="div" className='text'>
+                    Best Cars
+                </Typography> <hr style={{textAlign:'center', width:'25%', marginBottom:'30px'}}/>
                 
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} >
                     {

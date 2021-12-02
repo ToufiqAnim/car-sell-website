@@ -12,7 +12,7 @@ const CarInventory = ({car}) => {
     const {_id,image,name,price,mpg,transmission} = car;
     return (
         <Grid item xs={4} sm={4} md={4}>
-            <Card sx={{  borderRadius: 2  ,height:450}}>
+            <Card sx={{  borderRadius: 2  ,height:450}} data-aos="zoom-in" data-aos-duration="1500">
                 <CardMedia
                     component="img"
                     sx={{height:200}}

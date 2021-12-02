@@ -55,7 +55,8 @@ const drawer = (
           <Link to={`${url}/addReview`} style={{textDecoration:'none'}}>
           <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>Add Review</Button>
         </Link> <br /><hr />
-         {admin && <Box>
+        {/*  {admin &&  */}
+        <Box>
          <Link to={`${url}/makeAdmin`} style={{textDecoration:'none'}}>
           <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>Make Admin</Button>
         </Link><br /><hr />
@@ -69,7 +70,7 @@ const drawer = (
         <Link to={`${url}/manageAllOrders`} style={{textDecoration:'none'}}>
             <Button  color="inherit" sx={{fontWeight:'600' ,color:'#1976d2',mx:1}}>Manage All Orders</Button>
         </Link><hr />
-         </Box>}
+         </Box>
         </Box>
  
       {/* <List>
