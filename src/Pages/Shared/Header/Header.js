@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,13 +10,28 @@ import  {NavLink, Link}  from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 import './Header.css'
-
-const Header = () => {
+import { Container } from '@mui/material';
+ 
+const Header = ({toggle}) => {
     const {user, logOut} = useAuth();
+ 
+  /*   const [navBg, setNavBg] = useState('transparent');
+    const changeBackground = () =>{
+      if(window.scrollY >= 100) {
+        setNavBg("rgba(0,0,0,.9)")
+      }
+      else{
+        setNavBg('transparent')
+      }
+    } ;
+
+    window.addEventListener('scroll' , changeBackground ); */
     return (
-        <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" >
-          <Toolbar sx={{backgroundColor:'#09a0f7', py:2}}>
+        <Box sx={{ flexGrow: 1}}>
+        
+        <AppBar position="fixed"  elevation={0} style={{backgroundColor: "rgba(0,0,0,.6)"}}>
+        <Container maxWidth="xl">  
+          <Toolbar sx={{ py:2}}>
             <IconButton
               size="large"
               edge="start"
@@ -27,31 +42,41 @@ const Header = () => {
               <MenuIcon />
             </IconButton>
             
-            <Typography variant="h4" component="div" sx={{ flexGrow: 1,textAlign:'center'}}>
-              <Link to="/" style={{textDecoration:'none', color:'white'}}>Highline Motors</Link>
+            <Typography variant="h4" component="div" sx={{ flexGrow: 1}}> 
+              <Link to="/" style={{textDecoration:'none', color:'white', fontWeight:'bold'}} className="nav-brand">Highline Motors</Link>
             </Typography>
             
-            <Link to="/inventory" style={{textDecoration:'none', color:'white' }}>
-            <Button color="inherit" style={{fontWeight:'bold'}}>Inventory</Button>
+            <Typography className="nav-text" color="inherit" style={{fontWeight:'bold', fontSize:'1rem', background:'transparent'}}>
+              <Link to="/inventory" style={{textDecoration:'none', color:'white' }}>
+            INVENTORY
             </Link>
+            </Typography>
+            
             
             {user?.email ?
             <Box>
-            <NavLink to="/dashboard" style={{textDecoration:'none', color:'black'}}>
-             <Button color="inherit" style={{fontWeight:'bold'}}>DashBoard</Button>
+            <NavLink className="nav-text" to="/dashboard" style={{textDecoration:'none', fontWeight:'bold',fontSize:'1rem', color:'white', marginLeft:10}}>
+            DASHBOARD
              </NavLink>
-             <Button onClick={logOut} >Logout</Button>
+             <Button className="nav-text" onClick={logOut}  style={{fontSize:'1rem', color:'white', fontWeight:'bold'}}>Logout</Button>
              <Button  color="inherit">
             {user.displayName}
           </Button>
              </Box>
             :
-             <NavLink to="/login" style={{textDecoration:'none',backgroundColor:'#09a0f7'}}>
-             <Button  style={{fontWeight:'bold', color:'white'}}>Login</Button>
-             </NavLink>}
+            
+              <NavLink  to="/login" style={{textDecoration:'none'}} className='nav-text' >
+             <Typography style={{fontWeight:'bold', color:'white' ,fontSize:'1rem', marginLeft:10}}>
+             LOGIN  
+             </Typography>
+             </NavLink>
+           
+             }
         
           </Toolbar>
+          </Container>
         </AppBar>
+        
       </Box>
     );
 };

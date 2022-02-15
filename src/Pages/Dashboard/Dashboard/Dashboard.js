@@ -12,7 +12,8 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import { Link, NavLink } from 'react-router-dom';
-import { Button} from '@mui/material';
+import { Button, List} from '@mui/material';
+
 import {
   Switch,
   Route,
@@ -29,7 +30,7 @@ import AddCars from '../AddCars/AddCars';
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import AddReview from '../AddReview/AddReview';
 
-const drawerWidth = 200;
+const drawerWidth = 250;
 function DashBoard(props) {
     const {user, admin,logOut} = useAuth();
     const { window } = props;
@@ -40,49 +41,45 @@ function DashBoard(props) {
     };
 
 const drawer = (
-    <div>
-      <Toolbar />
+    <div  style={{background:'#010f1e'}}>
+      <Toolbar>
+        <Typography variant="h5" color="white" sx={{fontWeight:'bold'}}>
+        Highline Motor
+        </Typography>
+      
+      </Toolbar>
         
       <Divider />
-      
-     <Box >
+      <hr style={{marginTop:18}}/>
+     <List  style={{color:'white', height:"90vh"}}>
           <Link to={`${url}/pay`} style={{textDecoration:'none' }}>
-          <Button  color="inherit" sx={{fontWeight:'600',mx:1 ,color:'#1976d2'}} >Pay</Button>
-        </Link> <br /><hr />
+          <Button  color="inherit" sx={{fontWeight:'600',mx:1 ,color:'white'}} >Pay</Button>
+        </Link> <br />
           <Link to={`${url}/myOrders`} style={{textDecoration:'none'}}>
-          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>My Orders</Button>
-        </Link> <br /><hr />
+          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}>My Orders</Button>
+        </Link> <br />
           <Link to={`${url}/addReview`} style={{textDecoration:'none'}}>
-          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>Add Review</Button>
-        </Link> <br /><hr />
+          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}>Add Review</Button>
+        </Link> <br />
         {/*  {admin &&  */}
         <Box>
          <Link to={`${url}/makeAdmin`} style={{textDecoration:'none'}}>
-          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>Make Admin</Button>
-        </Link><br /><hr />
+          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}>Make Admin</Button>
+        </Link><br />
         <Link to={`${url}/addCars`} style={{textDecoration:'none'}}>
-            <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>Add Cars</Button>
-        </Link><br /><hr />
+            <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}>Add Cars</Button>
+        </Link><br />
         <Link to={`${url}/manageProducts`} style={{textDecoration:'none'}}>
-            <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'#1976d2'}}>Manage Products</Button>
-        </Link><hr />
+         <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}> Manage Products</Button>
+        </Link>
 
         <Link to={`${url}/manageAllOrders`} style={{textDecoration:'none'}}>
-            <Button  color="inherit" sx={{fontWeight:'600' ,color:'#1976d2',mx:1}}>Manage All Orders</Button>
-        </Link><hr />
+            <Button  color="inherit" sx={{fontWeight:'600' ,color:'white',mx:2}}>Manage All Orders</Button>
+        </Link>
          </Box>
-        </Box>
+        </List>
  
-      {/* <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
+     
 
     </div>
   );
@@ -91,7 +88,7 @@ const drawer = (
 
   return (
     <>
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex'}} >
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -100,7 +97,7 @@ const drawer = (
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar sx={{backgroundColor:'#010f1e'}}>
+        <Toolbar sx={{backgroundColor:'white', color:'black', py:3}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -111,7 +108,7 @@ const drawer = (
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-          <NavLink to='/' style={{textDecoration:"none", color:"white", marginRight:20}}>Home</NavLink>
+          <NavLink to='/' style={{textDecoration:"none", color:"black", background:'none', marginRight:20}}>Home</NavLink>
           </Typography>
           <Typography sx={{mr:5}} variant="h6" noWrap component="div">
             DashBoard
@@ -168,6 +165,7 @@ const drawer = (
       <Box
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        
       >
         <Toolbar />
         <Switch>

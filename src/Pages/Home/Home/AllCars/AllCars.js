@@ -10,7 +10,7 @@ const AllCars = () => {
     useEffect(()=>{
         fetch('https://still-thicket-39779.herokuapp.com/cars')
         .then(res => res.json())
-        .then(data => setCars(data.slice(0,6)))
+        .then(data => setCars(data.slice(0,8)))
     })
     return (
         <Box sx={{ flexGrow: 1 ,pb:5}}>

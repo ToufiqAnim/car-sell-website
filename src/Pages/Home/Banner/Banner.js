@@ -33,7 +33,7 @@ const Banner = () => {
               data={data}
               time={5000}
               width="100%"
-              height="800px"
+              height="900px"
               captionStyle={captionStyle}
               
               slideNumber={true}
@@ -50,7 +50,7 @@ const Banner = () => {
               style={{
                 textAlign: "center",
                 maxWidth: "100%",
-                maxHeight: "800px",
+                maxHeight: "900px",
                 
                 
               }}
