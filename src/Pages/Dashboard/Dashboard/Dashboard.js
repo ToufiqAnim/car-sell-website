@@ -13,7 +13,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import { Link, NavLink } from 'react-router-dom';
 import { Button, List} from '@mui/material';
-
+import LocalAtmIcon from '@mui/icons-material/LocalAtm';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import ReviewsIcon from '@mui/icons-material/Reviews';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import {
   Switch,
   Route,
@@ -29,6 +34,7 @@ import ManageProducts from '../ManageProduces/ManageProducts';
 import AddCars from '../AddCars/AddCars';
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import AddReview from '../AddReview/AddReview';
+import './Dashboard.css';
 
 const drawerWidth = 250;
 function DashBoard(props) {
@@ -51,30 +57,32 @@ const drawer = (
         
       <Divider />
       <hr style={{marginTop:18}}/>
-     <List  style={{color:'white', height:"90vh"}}>
-          <Link to={`${url}/pay`} style={{textDecoration:'none' }}>
-          <Button  color="inherit" sx={{fontWeight:'600',mx:1 ,color:'white'}} >Pay</Button>
-        </Link> <br />
+     <List  style={{color:'white', height:"90vh"}} >
+         <Box className='sidebar-list'>
+         <Link to={`${url}/pay`} style={{textDecoration:'none' }}> 
+          <Button  color="inherit" sx={{fontWeight:'600',mx:2, color:'white'}} ><LocalAtmIcon sx={{mr:1}}/>  Pay</Button>
+        </Link> 
           <Link to={`${url}/myOrders`} style={{textDecoration:'none'}}>
-          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}>My Orders</Button>
-        </Link> <br />
+          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}><BookmarkBorderIcon sx={{mr:1}}/> My Orders</Button>
+        </Link> 
           <Link to={`${url}/addReview`} style={{textDecoration:'none'}}>
-          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}>Add Review</Button>
-        </Link> <br />
+          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}><ReviewsIcon sx={{mr:1}}/>Add Review</Button>
+        </Link> 
+         </Box>
         {/*  {admin &&  */}
-        <Box>
+        <Box className='sidebar-list'>
          <Link to={`${url}/makeAdmin`} style={{textDecoration:'none'}}>
-          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}>Make Admin</Button>
-        </Link><br />
+          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}><AdminPanelSettingsIcon sx={{mr:1}} />Make Admin</Button>
+        </Link>
         <Link to={`${url}/addCars`} style={{textDecoration:'none'}}>
-            <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}>Add Cars</Button>
-        </Link><br />
+            <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}><AddBoxIcon sx={{mr:1}}/>Add Cars</Button>
+        </Link>
         <Link to={`${url}/manageProducts`} style={{textDecoration:'none'}}>
-         <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}> Manage Products</Button>
+         <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}> <ProductionQuantityLimitsIcon sx={{mr:1}} />  Manage Products</Button>
         </Link>
 
         <Link to={`${url}/manageAllOrders`} style={{textDecoration:'none'}}>
-            <Button  color="inherit" sx={{fontWeight:'600' ,color:'white',mx:2}}>Manage All Orders</Button>
+            <Button  color="inherit" sx={{fontWeight:'600' ,color:'white',mx:2}}>  Manage All Orders</Button>
         </Link>
          </Box>
         </List>

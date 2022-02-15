@@ -11,7 +11,7 @@ const SingleCar = (props) => {
     const {_id, name, price, image,mpg,transmission } = props.car;
     return (
         <Grid item xs={4} sm={4} md={4}  >
-            <Card sx={{ borderRadius:0, height:440}} data-aos="zoom-in" data-aos-duration="1500">
+            <Card variant="outlined" sx={{ borderRadius:0, height:440}} data-aos="zoom-in" data-aos-duration="1500" style={{border:"1px solid gray"}}>
                 <CardMedia
                     component="img"
                     sx={{height:250}}

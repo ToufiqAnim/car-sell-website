@@ -10,11 +10,11 @@ const AllCars = () => {
     useEffect(()=>{
         fetch('https://still-thicket-39779.herokuapp.com/cars')
         .then(res => res.json())
-        .then(data => setCars(data.slice(0,8)))
+        .then(data => setCars(data.slice(0,6)))
     })
     return (
         <Box sx={{ flexGrow: 1 ,pb:5}}>
-            <Container>
+            <Container maxWidth="xl">
                 <Typography sx={{ fontWeight: 500, color: '#112240' ,textAlign:'center', pt:5}} variant="h3" component="div" className='text'>
                     Featured Card Deals
                 </Typography>

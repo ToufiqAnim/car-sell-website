@@ -6,7 +6,7 @@ const AboutUs = () => {
     return (
         <div>
             <img src={about} alt="" style={{marginTop:50,width:'100%'}} data-aos="zoom-in" data-aos-duration="1000"/>
-            <Container sx={{my:8}}>
+            <Container sx={{my:8}} maxWidth="xl">
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6} sx={{}}>
@@ -47,7 +47,7 @@ const AboutUs = () => {
 
                     <Grid xs={12} sm={6} sx={{mt:5}}>
                         <Card sx={{p:4,boxShadow:0}}>
-                        <img src="https://motors.stylemixthemes.com/wp-content/uploads/2015/10/slide-2-1597x597.jpg" alt="" srcset="" style={{width:"100%",height:300}} data-aos="fade-left" data-aos-duration="1500"/>
+                        <img src="https://motors.stylemixthemes.com/wp-content/uploads/2015/10/slide-2-1597x597.jpg" alt="" srcset="" style={{width:"100%",height:348}} data-aos="fade-left" data-aos-duration="1500"/>
                         </Card>
                     </Grid>
                 </Grid>
