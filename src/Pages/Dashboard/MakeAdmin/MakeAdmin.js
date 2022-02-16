@@ -31,11 +31,11 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            <Container>
-                <Typography variant="h4" color="#1976d2">Create New Admin</Typography>
+            <Container maxWidth="xl" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+                <Typography variant="h4" color="#1976d2" sx={{mt:5}}>Create New Admin</Typography>
             <form onSubmit={handleMakeAdmin}>
                 <TextField
-                sx={{width:300, backgroundColor:'#eeef',my:2}}
+                sx={{width:400, backgroundColor:'#eeef',my:2}}
                      id="outlined-basic"
                     label = "Email"
                     type = "emai"

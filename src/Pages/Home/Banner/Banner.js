@@ -2,7 +2,7 @@
 import { Container, Button, Typography } from '@mui/material';
 import { Carousel } from 'react-carousel-minimal';
 import Header from '../../Shared/Header/Header';
-
+import './Banner.css';
 const Banner = () => {
     const data = [
         {
@@ -21,10 +21,11 @@ const Banner = () => {
       const captionStyle = {
         fontSize: '4em',
         fontWeight: 'bold',
-        mrginBottom:20
-        
+        position:'absolute',
+        top:'50%',
+        right:"25%",
+       
       }
-     
     return (
         <>
         <Header></Header>
@@ -55,7 +56,12 @@ const Banner = () => {
                 
               }}
               
-            />
+            >
+             
+            </Carousel>
+            <div className='btn-div'>
+              <button className="banner-btn">Know More</button>
+              </div>
          
          
 </>

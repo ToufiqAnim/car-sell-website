@@ -19,6 +19,7 @@ import ReviewsIcon from '@mui/icons-material/Reviews';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import {
   Switch,
   Route,
@@ -48,41 +49,48 @@ function DashBoard(props) {
 
 const drawer = (
     <div  style={{background:'#010f1e'}}>
-      <Toolbar>
+      <Toolbar sx={{borderBottom:1, color:'gray' , py:3}}>
         <Typography variant="h5" color="white" sx={{fontWeight:'bold'}}>
         Highline Motor
         </Typography>
       
       </Toolbar>
-        
+      
       <Divider />
-      <hr style={{marginTop:18}}/>
+      
      <List  style={{color:'white', height:"90vh"}} >
          <Box className='sidebar-list'>
-         <Link to={`${url}/pay`} style={{textDecoration:'none' }}> 
+         <Link to={`${url}/pay`} style={{textDecoration:'none', paddingBottom:10 }}> 
           <Button  color="inherit" sx={{fontWeight:'600',mx:2, color:'white'}} ><LocalAtmIcon sx={{mr:1}}/>  Pay</Button>
         </Link> 
-          <Link to={`${url}/myOrders`} style={{textDecoration:'none'}}>
+          <Link to={`${url}/myOrders`} style={{textDecoration:'none', paddingBottom:10}}>
           <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}><BookmarkBorderIcon sx={{mr:1}}/> My Orders</Button>
         </Link> 
-          <Link to={`${url}/addReview`} style={{textDecoration:'none'}}>
+          <Link to={`${url}/addReview`} style={{textDecoration:'none', paddingBottom:10}}>
           <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}><ReviewsIcon sx={{mr:1}}/>Add Review</Button>
         </Link> 
          </Box>
+         <Divider />
         {/*  {admin &&  */}
+        <Toolbar sx={{borderBottom:1, color:'gray' }}>
+        <Typography variant="h5" color="white" sx={{fontWeight:'bold'}}>
+        Admin Panel
+        </Typography>
+      
+      </Toolbar>
         <Box className='sidebar-list'>
-         <Link to={`${url}/makeAdmin`} style={{textDecoration:'none'}}>
+         <Link to={`${url}/makeAdmin`} style={{textDecoration:'none', paddingBottom:10, marginTop:10}}>
           <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}><AdminPanelSettingsIcon sx={{mr:1}} />Make Admin</Button>
         </Link>
-        <Link to={`${url}/addCars`} style={{textDecoration:'none'}}>
+        <Link to={`${url}/addCars`} style={{textDecoration:'none', paddingBottom:10}}>
             <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}><AddBoxIcon sx={{mr:1}}/>Add Cars</Button>
         </Link>
-        <Link to={`${url}/manageProducts`} style={{textDecoration:'none'}}>
+        <Link to={`${url}/manageProducts`} style={{textDecoration:'none', paddingBottom:10}}>
          <Button  color="inherit" sx={{fontWeight:'600',mx:2 ,color:'white'}}> <ProductionQuantityLimitsIcon sx={{mr:1}} />  Manage Products</Button>
         </Link>
 
-        <Link to={`${url}/manageAllOrders`} style={{textDecoration:'none'}}>
-            <Button  color="inherit" sx={{fontWeight:'600' ,color:'white',mx:2}}>  Manage All Orders</Button>
+        <Link to={`${url}/manageAllOrders`} style={{textDecoration:'none', paddingBottom:10}}>
+            <Button  color="inherit" sx={{fontWeight:'600' ,color:'white',mx:2}}><CollectionsBookmarkIcon sx={{mr:1}} /> Manage All Orders</Button>
         </Link>
          </Box>
         </List>
@@ -126,8 +134,8 @@ const drawer = (
              user?.email ?
    
                 <Box>
-                   <Button onClick={logOut} variant='outlined' sx={{mx:1}} color="inherit" ><LogoutIcon style={{paddingRight:2}}/>Logout</Button>
-                 <Button  sx={{mx:1}} color="inherit" ><PersonIcon style={{paddingRight:2}}/>{user.displayName}</Button>
+                   <Button onClick={logOut} variant='outlined' sx={{mx:1}} color="inherit" ><LogoutIcon style={{paddingBottomRight:2}}/>Logout</Button>
+                 <Button  sx={{mx:1}} color="inherit" ><PersonIcon style={{paddingBottomRight:2}}/>{user.displayName}</Button>
                 </Box>
                
 

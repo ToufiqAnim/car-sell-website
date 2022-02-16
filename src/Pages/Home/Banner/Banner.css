@@ -1,0 +1,16 @@
+.btn-div{
+    display: flex;
+   
+    position: absolute;
+    
+    bottom: 35%;
+    left: 8%;
+    
+   
+}
+.banner-btn{
+    border: none;
+    background: wheat;
+    padding:.7rem 1.4rem;
+    
+}

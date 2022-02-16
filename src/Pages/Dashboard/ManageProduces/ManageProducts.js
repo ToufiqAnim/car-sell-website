@@ -45,12 +45,10 @@ const ManageProducts = () => {
                                         alt="green iguana"
                                     />
                                     <CardContent>
-                                        <Typography  variant="h5" component="div" sx={{fontWeight:600}}>
+                                        <Typography  variant="h5" component="div" sx={{fontWeight:"bold"}}>
                                             {car.name}
                                         </Typography>
-                                        <Typography variant="h6" sx={{fontWeight:600}}>
-                                            ${car.price}
-                                        </Typography>
+                                        
                                     </CardContent>
                                     <CardActions>
                                
