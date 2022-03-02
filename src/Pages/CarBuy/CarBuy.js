@@ -1,11 +1,22 @@
 import { Button, Card, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
 import React, { useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
+import Backdrop from '@mui/material/Backdrop';
 
 
-
-const CarBuy = ({carDetail}) => {
+const style = {
+    position: 'absolute',
+    top: '40%',
+    right: '13%',
+    width: 400,
+    bgcolor: 'white',
+    boxShadow: 24,
+    p: 4,
+};
+const CarBuy = ({carDetail, carBooking, handleCarBookingClose}) => {
     const {name} = carDetail;
     const {user} = useAuth();
 
@@ -44,9 +55,21 @@ const CarBuy = ({carDetail}) => {
     }
 
     return (
-        <Card sx={{boxShadow:1,my:5,backgroundColor:'#eeef'}}>
-                <Box sx={{p:5}}>
-                <Typography id="transition-modal-title" variant="h6" component="h2" sx={{m:1,color:"#1976d2", fontWeight:600}}>
+        <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={carBooking}
+        onClose={handleCarBookingClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+            timeout: 500,
+        }}
+        >
+            <Fade in= {carBooking}>
+            
+                <Box sx={style}>
+                <Typography id="transition-modal-title" variant="h6" component="h2" sx={{m:1,color:"#dd3d53", fontWeight:600}}>
                   {name}
               </Typography>
               <form onSubmit={handleBuyCar}>
@@ -73,7 +96,7 @@ const CarBuy = ({carDetail}) => {
                       id="outlined-basic"
                       name="phone"
                       onBlur={handleOnBlur}
-                      defaultValue="Phone Number"
+                      placeholder="Phone Number"
                       
                   />
                   <TextField
@@ -81,14 +104,16 @@ const CarBuy = ({carDetail}) => {
                       id="outlined-basic"
                       name="address"
                       onBlur={handleOnBlur}
-                      defaultValue="Address"
+                      placeholder="Address"
                      
                   />
                   
                   <Button type="submit" variant="contained" sx={{m:1}}>Submit</Button>
               </form>
                 </Box>
-          </Card>
+         
+            </Fade>
+        </Modal>
     );
 };
 

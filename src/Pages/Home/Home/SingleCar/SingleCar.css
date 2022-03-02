@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&family=Oswald:wght@500&family=Poppins:wght@500&family=Saira+Condensed:wght@500&display=swap');
+.single-car{
+    font-family: 'Cormorant Upright', serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
+} 
+.card-btn{
+    display: flex;
+    flex-direction: column;
+}
+.sale{
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+   
+
+}

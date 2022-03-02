@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
     const  [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        const url =  `https://still-thicket-39779.herokuapp.com/buyer`
+        const url =  `https://still-thicket-39779.herokuapp.com/allorders`
         fetch(url)
         .then(res => res.json())
         .then(data => setAllOrders(data))

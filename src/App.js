@@ -12,15 +12,18 @@ import LogIn from './Pages/Home/LogIn/LogIn/LogIn';
 import Register from './Pages/Home/LogIn/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/Home/LogIn/PrivateRoute/PrivateRoute';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import CarDetails from './Pages/CarDetails/CarDetails';
 import DashBoard from './Pages/Dashboard/Dashboard/Dashboard';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import CarBuy from './Pages/CarBuy/CarBuy';
 
 function App() {
   AOS.init()
   return (
+   
     <div className="App">
       <AuthProvider>
       <Router>
@@ -35,6 +38,9 @@ function App() {
           <PrivateRoute path='/carDetails/:carId'>
             <CarDetails></CarDetails>
           </PrivateRoute>
+          {/* <PrivateRoute path='/carDetails/carBuy'>
+            <CarBuy></CarBuy>
+          </PrivateRoute> */}
           <PrivateRoute path='/dashBoard'>
             <DashBoard></DashBoard>
           </PrivateRoute>
@@ -55,6 +61,7 @@ function App() {
       </Router>
       </AuthProvider>
     </div>
+
   );
 }
 

@@ -9,11 +9,11 @@ import {  CardActions, Rating } from '@mui/material';
 const Review = (props) => {
     const {name,reviewDescription,ratings} = props.review;
     return (
-        <Grid item xs={4} sm={4} md={4} data-aos="fade-left" data-aos-duration="1500">
+        <Grid item xs={4} sm={4} md={4} data-aos="fade-left" data-aos-duration="1500" sx={{fontFamily:`'Saira Condensed', 'sans-serif'`}}>
         <Card sx={{boxShadow:2, height:350 }}>
             
             <CardContent sx={{textAlign:'center' ,display:'flex', flexDirection:'column'}}>
-                <Typography  variant="h5" component="div" sx={{fontWeight:600,p:2,color:'salmon'}}>
+                <Typography  variant="h5" component="div" sx={{fontWeight:600,p:2,color:'#dd3d53'}}>
                     {name} <hr />
                 </Typography>
                 <Typography  sx={{px:2,color:'gray',fontSize:14}}>

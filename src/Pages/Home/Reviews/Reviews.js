@@ -15,8 +15,8 @@ const Reviews = () => {
     return (
         <Box sx={{ flexGrow: 1}}>
             <Container>
-                <Typography sx={{ fontWeight: 600, color: 'salmon' ,textAlign:'center', py:5}} variant="h3" component="div" >
-                    REVIEWS
+                <Typography sx={{ fontWeight: 700,textAlign:'center', py:5,color:'#dd3d53'}} variant="h4" component="div" >
+                WHAT OUR CLIENTS SAY  
                 </Typography>
                 
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

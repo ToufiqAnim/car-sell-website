@@ -9,15 +9,14 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Button } from '@mui/material';
 
-
 const MyOrders = () => {
 
     const {user} = useAuth();
     const  [myOrders, setMyOrders] = useState([]);
-   
+    /* const { email } = useParams(); */
 
     useEffect(() => {
-        const url =  `https://still-thicket-39779.herokuapp.com/buyer?email=${user.email}`
+        const url =  `https://still-thicket-39779.herokuapp.com/myorders/${user.email}`
         fetch(url)
         .then(res => res.json())
         .then(data => setMyOrders(data))

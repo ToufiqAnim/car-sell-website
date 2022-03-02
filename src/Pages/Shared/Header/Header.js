@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import  {NavLink, Link}  from 'react-router-dom';
+import  {NavLink, Link, useLocation}  from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 import './Header.css'
@@ -14,22 +14,21 @@ import { Container } from '@mui/material';
  
 const Header = ({toggle}) => {
     const {user, logOut} = useAuth();
- 
-  /*   const [navBg, setNavBg] = useState('transparent');
-    const changeBackground = () =>{
-      if(window.scrollY >= 100) {
-        setNavBg("rgba(0,0,0,.9)")
-      }
-      else{
-        setNavBg('transparent')
-      }
-    } ;
+    const [navBg, setNavBg] = useState('transparent');
+    const location = useLocation();
 
-    window.addEventListener('scroll' , changeBackground ); */
+    useEffect(() =>{
+      if (window.location.pathname === "/") {
+        setNavBg('rgba(0,0,0,.3)');
+      } else {
+        setNavBg("#222732")
+      }
+    },[location])
+  
     return (
         <Box sx={{ flexGrow: 1}}>
         
-        <AppBar position="fixed"  elevation={0} style={{backgroundColor: "rgba(0,0,0,.6)"}}>
+        <AppBar position="fixed"  elevation={0} style={{ backgroundColor: navBg }}>
         <Container maxWidth="xl">  
           <Toolbar sx={{ py:2}}>
             <IconButton

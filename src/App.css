@@ -1,8 +1,12 @@
-.App {
-  font-family: 'Poppins', sans-serif;
-} 
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&family=Oswald:wght@500&family=Poppins:wght@500&display=swap');
+*{
+   font-family: 'Cormorant Upright', serif;  
+  font-family: 'Oswald', sans-serif;
+   font-family: 'Poppins', sans-serif;   
+  
+}  */
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -36,3 +40,4 @@
     transform: rotate(360deg);
   }
 }
+ */

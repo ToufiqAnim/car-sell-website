@@ -11,7 +11,7 @@ const AddCars = () => {
     const onSubmit = data => {
         console.log(data);
 
-         axios.post('https://still-thicket-39779.herokuapp.com/cars', data)
+         axios.post('https://still-thicket-39779.herokuapp.com/addcars', data)
         .then(res => {
             if(data.name){
                 alert('Added New Plan Successfully');
